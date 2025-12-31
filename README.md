@@ -51,7 +51,7 @@ After cloning the project to your local machine, run the following commands in t
 
 ## 👨‍💻 Developer
 
-**[Your Name]**
+**Umut Keskin**
 * GitHub: [@KeYoda](https://github.com/KeYoda)
 * Mail:keyodapp@gmail.com
 
