@@ -8,9 +8,9 @@ Subby, aylık, haftalık, yıllık veya günlük aboneliklerinizi takip etmenizi
 
 ## 📱 Ekran Görüntüleri
 
-| Ana Sayfa | Ekleme Ekranı | İstatistikler | Dark Mode |
-|:---------:|:-------------:|:-------------:|:---------:|
-| <img src="screenshots/home.png" width="200"/> | <img src="screenshots/add.png" width="200"/> | <img src="screenshots/stats.png" width="200"/> | <img src="screenshots/dark.png" width="200"/> |
+| Ana Sayfa | Ekleme Ekranı | İstatistikler |
+|:---------:|:-------------:|:-------------:|
+| <img src="screenshots/home.jpeg" width="200"/> | <img src="screenshots/add.jpeg" width="200"/> | <img src="screenshots/chart.jpeg" width="200"/> | 
 
 ## ✨ Özellikler
 
