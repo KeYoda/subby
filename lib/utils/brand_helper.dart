@@ -147,7 +147,7 @@ class BrandHelper {
     // --- Yazılım & AI & İş ---
     'github': BrandInfo(
       'GitHub Copilot',
-      const Color(0xFF181717),
+      const Color.fromARGB(255, 40, 40, 40),
       FontAwesomeIcons.github,
     ),
     'chatgpt': BrandInfo(

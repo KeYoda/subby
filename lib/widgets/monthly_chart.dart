@@ -1,6 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:subby/utils/brand_helper.dart';
 import '../models/subscription.dart';
 
 class MonthlyChart extends StatefulWidget {
@@ -262,6 +264,7 @@ class _MonthlyChartState extends State<MonthlyChart> {
     return List.generate(widget.subscriptions.length, (i) {
       final isTouched = i == touchedIndex;
       final sub = widget.subscriptions[i];
+
       double value = sub.price;
       if (sub.cycle == BillingCycle.yearly) value /= 12;
       if (sub.cycle == BillingCycle.weekly) value *= 4;
@@ -279,6 +282,9 @@ class _MonthlyChartState extends State<MonthlyChart> {
   }
 
   Widget _buildIconBadge(Subscription sub, ColorScheme colorScheme) {
+    final color = Color(sub.colorValue);
+    final brandInfo = BrandHelper.getBrandInfo(sub.name);
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       width: 40,
@@ -295,13 +301,24 @@ class _MonthlyChartState extends State<MonthlyChart> {
           ),
         ],
       ),
-      child: Center(
-        child: Text(
-          sub.name.isNotEmpty ? sub.name[0] : '?',
-          style: TextStyle(
-            color: Color(sub.colorValue),
-            fontWeight: FontWeight.bold,
-          ),
+      child: Container(
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.2),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+          child: brandInfo != null
+              ? FaIcon(brandInfo.icon, color: color, size: 28)
+              : (Text(
+                  sub.name.isNotEmpty ? sub.name[0].toUpperCase() : '?',
+                  style: TextStyle(
+                    color: color,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
         ),
       ),
     );

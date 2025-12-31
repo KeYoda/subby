@@ -118,7 +118,6 @@ class SubscriptionCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 16),
-
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,7 +131,7 @@ class SubscriptionCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text(
                       '${NumberFormat.currency(locale: 'tr', symbol: '₺').format(subscription.price)} / $cycleText',
-                      style: theme.textTheme.bodyMedium?.copyWith(
+                      style: theme.textTheme.bodySmall?.copyWith(
                         color: Colors.grey[600],
                       ),
                     ),
